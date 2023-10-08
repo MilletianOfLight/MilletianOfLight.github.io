@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>커스텀시트 메이커</title>
+  <style>
+      div {
+        display: inline-block;
+      }
+      i {
+        opacity: 0.5;
+      }
+  </style>
+  <script src="customsheet.js"></script>
+</head>
+<body>
+
+  <script>
+    function copyTohtml(){
+    var content = "document.getElementById('textArea').innerHTML";
+
+    navigator.clipboard.writeText(content)
+        .then(() => {
+        console.log("복사 완료.")
+    })
+        .catch(err => {
+        console.log('오류 발생.', err);
+    })
+    }
+  </script>
+
+  <h1>커스텀시트 메이커</h1>
+  <div style="width: 100%; padding-bottom: 50px;">
+    사용법<br>
+    1) 커스텀 시트 설정 페이지로 이동해 <b>레거시 처리</b>를 켜줍니다.<br>
+    2) 첨부되어 있는 html.txt와 translations.txt를 커스텀 시트 페이지에 각각 붙여넣습니다.<br>
+
+    <a href="./html.txt" download><button type="button">html.txt 링크</button></a>
+    <a href="./translations.txt" download><button type="button">translations.txt 링크</button></a><br>
+
+    3) 해당 메이커에서 설정을 한 후 만들기 버튼을 누릅니다.<br>
+    4) 다운로드된 css.txt를 css에 붙여넣습니다.<br>
+
+  </div>
+      <ins class="kakao_ad_area" style="display:none;"
+        data-ad-unit = "DAN-IiOm6GSZHxHtjhEc"
+        data-ad-width = "320"
+        data-ad-height = "100">
+      </ins>
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+    <div style="vertical-align:top; padding-right: 200px;">
+    배경 이미지 링크 : <input type="text" id="background-image-link"><br>
+    <i opa>imgur 등의 이미지 외부 링크 사이트에서 이미지 주소 복사를 해서 넣어주세요.<br></i>
+    웹폰트 내용 : <input type="text" id="web-font"><br>
+    <i>눈누(<a href="https://noonnu.cc/">https://noonnu.cc/</a>) 등의 사이트에서 웹폰트를 찾아 코드를 복사해주세요.<br></i>
+    웹폰트 font-family : <input type="text" id="web-font-family"><br>
+    <i>웹폰트 내용 중 font-family의 내용을 찾아 복사해주세요. ""안의 내용만 적어주세요.<br></i>
+    폰트 색상 : <input type="color" id="font-color" value="#ffffff"> 투명도(0.0~1.0) : <input type="text" id="font-opacity" value="1.0"><br>
+    박스 색상 : <input type="color" id="box-color"> 투명도(0.0~1.0) : <input type="text" id="box-opacity" value="1.0"><br>
+    <button type="button" id="saveBtn" onclick="saveContent()">만들기</button><br>
+  </div>
+  <div>
+    <iframe id="sample_frame" width="917px" height="635px"></iframe>
+  </div>
+<ins class="kakao_ad_area" style="display:none;"
+  data-ad-unit = "DAN-WSO7mLxs4WQiwUUx"
+  data-ad-width = "320"
+  data-ad-height = "100">
+</ins>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+<br><br><br><br>수정 문의 : 정글족장김명반 @zF2V4b9UoCY0t8z
+
+</body>
+</html>
